@@ -6,6 +6,8 @@
 // console.log(b.pop())
 // console.log(a)
 
+// const { formToJSON } = require("axios");
+
 // var obj = {name : "ram" , age:12 , social:{
 //     facebook: {
 //         fisrt : 'ram raja',
@@ -3101,28 +3103,179 @@ const scores = [65, 70, 45, 80, 55, 60, 75, 40, 85, 90];
 //  promise.catch(function(err){
 //    console.log("error: " + err)
 // })
-let cart = ["shoe", "shirt", "T-shirt"];
-const pr = createCart(cart);
+// let cart = ["shoe", "shirt", "T-shirt"];
+// const pr = createCart(cart);
 
-pr.then(function (orderId) {
-  console.log("orderId: " + orderId);
-})
-.catch(function(err){
-  console.log("Error: " + err);
-})
+// pr.then(function (orderId) {
+//   console.log("orderId: " + orderId);
+// })
+// .catch(function(err){
+//   console.log("Error: " + err);
+// })
 
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function createCart(nums){
-  return new Promise(function(resolve, reject){
-    if(!validateCart()){
-      reject("Invalid cart");
+// function createCart(nums){
+//   return  new Promise(function(resolve, reject){
+//     if(!validateCart(nums)){
+//       reject("Invalid cart");
+//     }
+//     let cartId = nums;
+//     resolve(cartId);
+//   });
+// }
+
+// function validateCart(cart) {
+//   if(typeof(cart) === "object"){
+//     return true
+//   }else{
+//     return false
+//   }
+  
+// 
+
+
+// const api = fetch("https://fakestoreapi.com/products")
+
+// api.then(function(response){
+// return response
+// })
+// .then(function(data){
+//   console.log(data)
+
+// })
+// .catch(function(err){
+//   console.log(err)
+// })
+
+// console.log(api)
+
+
+// const axios = require("axios");
+
+// const fetchData = axios.get("https://fakestoreapi.com/products")
+// console.log(fetchData)
+
+
+// const axios = require("axios");
+
+// axios.get("https://fakestoreapi.com/products")
+//   .then(response => {
+//     console.log(response.data.category);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   })
+
+
+
+
+// const apiHandel = fetch("https://fakestoreapi.com/products/1")
+
+// apiHandel.then((response)=>{ 
+//   return response.json()
+// })
+// .then((data)=>{
+//   console.log(data)
+// })
+
+
+
+// function callOuter(data){
+
+// return function(dt){
+//     console.log(data)
+    
+// }
+// }
+
+// let arr = [1,2,3,4,5,6,7,8,9]
+//  const eww = callOuter(arr)
+//  const ww = eww() 
+//  ww(5656545)
+
+
+// let obj1 = {
+//     name : "ram",
+//     age: 58,
+//    facebookId : {
+//     id: 123,
+//     name: "ram",
+//         details:{
+//         address: "pune",
+//         city: "Mumbai"
+//         }
+//    },
+
+// }
+
+// let val = Object.keys(obj1)
+// console.log(val)
+
+// for(let key in obj1){
+//     // if (obj1.hasOwnProperty(key)) {
+//     //     console.log(key + ": " + obj1[key]);
+//     // }
+//     console.log(obj1[key]);
+    
+// }
+
+// let arr1 = [,2,3,1,212,52]
+// console.log(arr1.length);
+// console.log(arr1.findIndex((nums)=> ));
+
+
+
+
+// console.log(obj1.length)
+
+// for(let i = 0 ; i < obj1.length ; i++){
+//     console.log(obj1[i])
+// }
+
+
+// let obj2 = JSON.parse(JSON.stringify(obj1))
+
+// obj2.name = "shaym"
+
+// obj2.age = 4565456
+
+
+// console.log(obj1);
+
+// console.log(obj2);
+
+
+
+// obj1.facebookId.id= 4654
+// obj1.age = 65
+
+// console.log(obj1.facebookId.id)
+
+
+
+function deepCopy(obj){
+    if(typeof ob !== Object ||  obj === null){
+        return obj;
     }
-    let cartId = Math.floor(Math.random() * 100000);
-    resolve(cartId);
-  });
+
+    var copiedVlue = Array.isArray(obj) ? [] : {} ;
+    var key = Object.keys(obj)
+
+    for (let i = 0; i < key.length; i++) {
+        console.log(key)
+       
+        
+    }
+
+
+
+    return copiedVlue
 }
 
-function validateCart() {
-  return false;
-}
+
+let obj1 = {name :"ales" , age: 5}
+
+deepCopy(obj1)
+
+// val()
